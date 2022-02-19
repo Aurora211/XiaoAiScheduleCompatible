@@ -1,17 +1,13 @@
 {
   "lastUpdate": "2022年02月20日",
-//"tatalWeek": 20,          // Total week count, value between [1,30]
-//"startSemester": "",      // School opening time, 13 bit long string, Code generation is recommended
-//"startWithSunday": false, // Is Sunday the starting date
-//"showWeekend": true,      // Show weekend
-  "forenoon": 5,            // Number of courses in the morning, value between [1,10]
-  "afternoon": 4,           // Number of courses in the afternoon, value between [0,10]
-  "night": 3,               // Number of courses in the night, value between [0,10]
+  "forenoon": 5,
+  "afternoon": 4,
+  "night": 3,
   "sections": [
     {
-      "section": 1,         // Course section, value between [1,30]
-      "startTime": "08:00", // Course start time, value must format like the example
-      "endTime": "08:45"    // Course end time, value must format like the example
+      "section": 1,
+      "startTime": "08:00",
+      "endTime": "08:45"
     },
     {
       "section": 2,
