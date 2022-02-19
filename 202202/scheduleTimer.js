@@ -40,6 +40,7 @@ async function scheduleTimer({
      */
     await loadTool('AIScheduleTools');
 
+    await AIScheduleAlert("接下来程序将尝试从开发者的Github获取最新时间表，请稍等。\n超时后自动使用开发者内置时间表。");
     // Fetch the time table data
     var timeTable = await fetchTimeTable("https://aurora211.github.io/XiaoAiScheduleCompatible/time.json");
     console.log(timeTable);
