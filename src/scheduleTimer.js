@@ -40,7 +40,7 @@ async function scheduleTimer({
      */
     await loadTool('AIScheduleTools');
 
-    await AIScheduleAlert("½ÓÏÂÀ´³ÌĞò½«³¢ÊÔ´Ó¿ª·¢ÕßµÄGithub»ñÈ¡×îĞÂÊ±¼ä±í£¬ÇëÉÔµÈ¡£\n³¬Ê±ºó×Ô¶¯Ê¹ÓÃ¿ª·¢ÕßÄÚÖÃÊ±¼ä±í¡£");
+    await AIScheduleAlert("æ¥ä¸‹æ¥ç¨‹åºå°†å°è¯•ä»å¼€å‘è€…çš„Githubè·å–æœ€æ–°æ—¶é—´è¡¨ï¼Œè¯·ç¨ç­‰ã€‚\nè¶…æ—¶åè‡ªåŠ¨ä½¿ç”¨å¼€å‘è€…å†…ç½®æ—¶é—´è¡¨ã€‚");
     // Fetch the time table data
     var timeTable = await fetchTimeTable("https://aurora211.github.io/XiaoAiScheduleCompatible/time.json");
     console.log(timeTable);
@@ -48,20 +48,20 @@ async function scheduleTimer({
     if (timeTable == false) {
         // Fetch failed using built-in schedule
         console.log("Fetch failed to get schedule data");
-        /*await AIScheduleAlert({
-            titleText: "ÔÚÏßÊ±¼ä±í´íÎó",
-            contentText: "ÎŞ·¨»ñÈ¡ÔÚÏßÊ±¼ä±í£¬ÕıÔÚÊ¹ÓÃÄÚÖÃÊ±¼ä±íÌæ´ú",
-            confirmText: "ºÃµÄ"
-        });*/
+        await AIScheduleAlert({
+            titleText: "æ—¶é—´è¡¨æœåŠ¡å™¨è¶…æ—¶",
+            contentText: "è·å–è¶…æ—¶ï¼Œå³å°†ä½¿ç”¨å†…ç½®æ—¶é—´è¡¨",
+            confirmText: "ç¡®è®¤"
+        });
         timeTable = builtInSchedule();
     }
 
     // Ask the user if they follow the schedule
     var mode = await AIScheduleConfirm({
-        titleText: "ÊÇ·ñÊ¹ÓÃ³ÌĞòÊ±¼ä±í",
-        contentText: "×î½ü¸üĞÂÊ±¼ä£º\n" + timeTable["lastUpdate"] + "\nÀ´Ô´Ñ§Ôº£º\n" + timeTable["college"] + "\nÊı¾İÀ´Ô´:\n" + timeTable["from"],
-        cancelText: "²»Ê¹ÓÃ",
-        confirmText: "Ê¹ÓÃ"
+        titleText: "æ˜¯å¦ä½¿ç”¨ç¨‹åºæ—¶é—´è¡¨",
+        contentText: "æœ€è¿‘æ›´æ–°æ—¶é—´ï¼š\n" + timeTable["lastUpdate"] + "\næ¥æºå­¦é™¢ï¼š\n" + timeTable["college"] + "\næ•°æ®æ¥æº:\n" + timeTable["from"],
+        cancelText: "ä¸ä½¿ç”¨",
+        confirmText: "ä½¿ç”¨"
     })
     // Decide whether to use the program schedule according to the user's choice
     if (mode) {
@@ -85,8 +85,8 @@ async function fetchTimeTable(url) {
 
 function builtInSchedule() {
     return {
-        "lastUpdate": "2022Äê02ÔÂ20ÈÕ",
-        "college": "Èí¼şÓëÎïÁªÍø¹¤³ÌÑ§Ôº",
+        "lastUpdate": "2022å¹´02æœˆ20æ—¥",
+        "college": "è½¯ä»¶ä¸ç‰©è”ç½‘å·¥ç¨‹å­¦é™¢",
         "from": "Built-in",
         //"tatalWeek": 20,          // Total week count, value between [1,30]
         //"startSemester": "",      // School opening time, 13 bit long string, Code generation is recommended

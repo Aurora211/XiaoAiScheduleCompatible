@@ -15,7 +15,7 @@ async function scheduleHtmlProvider(dom = document) {
     if (titleElement == false || checkFrmSrc(titleElement) == false) {
         // User is not on the specified page
         console.log("User is not at the specified page! Stop the function");
-        await AIScheduleAlert("������ѡ�\"��ѧ����\"��ִ�е������");
+        await AIScheduleAlert("请您在选项卡\"教学安排\"下执行导入操作");
         return "do not continue";
     }
     // User is on the specified page, clear to Proceed
@@ -28,9 +28,9 @@ async function scheduleHtmlProvider(dom = document) {
         // Target table is found!
         console.log("User class schedule table found! Return the string")
         await AIScheduleAlert({
-            titleText: "��ʾ",
-            contentText: "����γ̴��ڳ�ͻ��������Զ��ų����ֿγ̣��Ҳ�����ִ�����ʾ��\n���ڵ��������ȷ���α������ԡ�",
-            confirmText: "�õ�"
+            titleText: "提示",
+            contentText: "如果课程存在冲突，程序会自动排除部分课程，且不会出现错误提示。\n请在导入后自行确定课表完整性。",
+            confirmText: "好的"
         })
         return timeTable.parentElement.innerHTML;
     }
