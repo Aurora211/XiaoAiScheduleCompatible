@@ -15,7 +15,7 @@ async function scheduleHtmlProvider(dom = document) {
     if (titleElement == false || checkFrmSrc(titleElement) == false) {
         // User is not on the specified page
         console.log("User is not at the specified page! Stop the function");
-        await AIScheduleAlert("ÇëÄúÔÚÑ¡Ïî¿¨\"½ÌÑ§°²ÅÅ\"ÏÂÖ´ÐÐµ¼Èë²Ù×÷");
+        await AIScheduleAlert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½î¿¨\"ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½\"ï¿½ï¿½Ö´ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         return "do not continue";
     }
     // User is on the specified page, clear to Proceed
@@ -28,9 +28,9 @@ async function scheduleHtmlProvider(dom = document) {
         // Target table is found!
         console.log("User class schedule table found! Return the string")
         await AIScheduleAlert({
-            titleText: "ÌáÊ¾",
-            contentText: "Èç¹û¿Î³Ì´æÔÚ³åÍ»£¬³ÌÐò»á×Ô¶¯ÅÅ³ý²¿·Ö¿Î³Ì£¬ÇÒ²»»á³öÏÖ´íÎóÌáÊ¾¡£\nÇëÔÚµ¼Èëºó×ÔÐÐÈ·¶¨¿Î±íÍêÕûÐÔ¡£",
-            confirmText: "ºÃµÄ"
+            titleText: "ï¿½ï¿½Ê¾",
+            contentText: "ï¿½ï¿½ï¿½ï¿½Î³Ì´ï¿½ï¿½Ú³ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½Ö¿Î³Ì£ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½\nï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½",
+            confirmText: "ï¿½Ãµï¿½"
         })
         return timeTable.parentElement.innerHTML;
     }
@@ -133,7 +133,7 @@ function checkForSingleElement(tag, id, dom = document) {
  *   ID:  divTitle
  */
 function checkFrmSrc(element) {
-    var targetSrc = "½ÌÑ§°²ÅÅ±í";
+    var targetSrc = "å­¦ç”Ÿä¸ªäººè¯¾è¡¨";
     if (element.innerText == targetSrc) {
         return true;
     }
