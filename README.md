@@ -3,6 +3,9 @@
 开源协议稍后更新确定，项目还未完工
 
 ## 版本更新记录
+### 202206
+[Provider] 修复divTitle，适应新识别字符串
+
 ### 202202
 [Provider] 完全重写了代码  
 [Provider] 新增支持AIScheduleTools、异步  
