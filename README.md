@@ -3,9 +3,9 @@
 开源协议稍后更新确定，项目还未完工
 
 ## 小米说明文档
-[小米使用教程](https://open-schedule-prod.ai.xiaomi.com/docs/#/help/)
-[小米开发资源库](https://open-schedule-prod.ai.xiaomi.com/docs/#/assets/)
-[小米更新日志](https://open-schedule-prod.ai.xiaomi.com/docs/#/release/)
+[小米使用教程](https://open-schedule-prod.ai.xiaomi.com/docs/#/help/)  
+[小米开发资源库](https://open-schedule-prod.ai.xiaomi.com/docs/#/assets/)  
+[小米更新日志](https://open-schedule-prod.ai.xiaomi.com/docs/#/release/)  
 
 ## 版本更新记录
 ### 202206
