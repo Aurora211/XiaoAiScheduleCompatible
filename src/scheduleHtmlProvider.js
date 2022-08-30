@@ -15,8 +15,18 @@ async function scheduleHtmlProvider(dom = document) {
     if (titleElement == false || checkFrmSrc(titleElement) == false) {
         // User is not on the specified page
         console.log("User is not at the specified page! Stop the function");
-        await AIScheduleAlert("请您在选项卡\"教学安排\"下执行导入操作");
-        return "do not continue";
+        // Force to continue
+        var forceContinue = await AIScheduleConfirm({
+            titleText: "是否强制继续",
+            contentText: "如果您确实在选项卡\"交学安排\"下的课表内，请点击强制继续并忽略此提示。此提示的原因可能是识别代码未更新造成。",
+            confirmText: "强制继续",
+            cancelText: "终止导入"
+        });
+        // If you are not at the right place, and you force to continue you will get an error respond
+        if (! forceContinue) 
+        {
+            return "do not continue";
+        }
     }
     // User is on the specified page, clear to Proceed
     console.log("User is at the specified page. Clear to continue");
