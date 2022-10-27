@@ -9,10 +9,10 @@
 
 ## 版本更新记录
 ### 202206
-[Provider] 修复divTitle，适应新识别字符串
-[Provider] Github 中文编码修复
-[Parser] Github 中文编码修复
-[Timer] Github 中文编码修复
+[Provider] 修复divTitle，适应新识别字符串  
+[Provider] Github 中文编码修复  
+[Parser] Github 中文编码修复  
+[Timer] Github 中文编码修复  
 
 ### 202202
 [Provider] 完全重写了代码  
